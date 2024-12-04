@@ -8,7 +8,12 @@ interface DeleteModalProps {
   isDeleting: boolean;
 }
 
-const DeleteModal: React.FC<DeleteModalProps> = ({ isModalVisible, handleDelete, setIsModalVisible, isDeleting }) => {
+const DeleteModal: React.FC<DeleteModalProps> = ({
+  isModalVisible,
+  handleDelete,
+  setIsModalVisible,
+  isDeleting,
+}) => {
   return (
     <Modal
       title="Confirm Deletion"
@@ -19,13 +24,16 @@ const DeleteModal: React.FC<DeleteModalProps> = ({ isModalVisible, handleDelete,
       cancelText="No, Cancel"
       confirmLoading={isDeleting}
       okButtonProps={{
-        className: 'bg-red-500 hover:!bg-red-200 text-white transition duration-300 ease-in-out dark:bg-red-600 dark:hover:bg-red-700',
+        className:
+          'bg-red-500 hover:!bg-red-200 text-white transition duration-300 ease-in-out dark:bg-red-600 dark:hover:bg-red-700',
         classNames: {
           icon: 'text-white',
         },
       }}
     >
-      <p>Are you sure you want to delete this post? This action cannot be undone.</p>
+      <p>
+        Are you sure you want to delete this post? This action cannot be undone.
+      </p>
     </Modal>
   );
 };

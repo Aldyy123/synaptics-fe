@@ -27,17 +27,17 @@ const Providers: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   };
 
   if (!hydrated) {
-    return <div className="min-h-screen bg-gray-100">Loading...</div>; 
+    return <div className="min-h-screen bg-gray-100">Loading...</div>;
   }
 
   return (
-    <ConfigProvider
-      theme={getThemeConfig(theme === 'dark')}
-    >
+    <ConfigProvider theme={getThemeConfig(theme === 'dark')}>
       <QueryClientProvider client={queryClient}>
         <div
           className={`min-h-screen transition-all duration-300 ${
-            theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'
+            theme === 'dark'
+              ? 'bg-gray-900 text-white'
+              : 'bg-white text-gray-900'
           }`}
         >
           <div className="p-4">

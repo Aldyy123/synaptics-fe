@@ -29,7 +29,10 @@ const AuthDialog: React.FC<AuthDialogProps> = ({ onSubmit }) => {
           <Input value={name} onChange={(e) => setName(e.target.value)} />
         </Form.Item>
         <Form.Item label="GoRest Token" required>
-          <Input.Password value={token} onChange={(e) => setToken(e.target.value)} />
+          <Input.Password
+            value={token}
+            onChange={(e) => setToken(e.target.value)}
+          />
         </Form.Item>
         <Button type="primary" onClick={handleSubmit}>
           Submit

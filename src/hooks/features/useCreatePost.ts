@@ -17,7 +17,7 @@ export const useCreatePost = () => {
   });
 
   const { mutate, isPending: isCreating } = useMutation({
-    mutationFn: (data: { title: string; body: string, user_id: number }) => {
+    mutationFn: (data: { title: string; body: string; user_id: number }) => {
       return postService.createPost(data, token);
     },
     onSuccess: () => {
@@ -31,7 +31,8 @@ export const useCreatePost = () => {
 
   useEffect(() => {
     if (users && users.data.length > 0) {
-      const randomUser = users.data[Math.floor(Math.random() * users.data.length)];
+      const randomUser =
+        users.data[Math.floor(Math.random() * users.data.length)];
       setUserId(randomUser.id);
     }
   }, [users]);
@@ -40,7 +41,7 @@ export const useCreatePost = () => {
     if (!userId) {
       message.error('User ID is missing');
       return;
-    }   
+    }
 
     const postData = {
       ...data,
@@ -55,6 +56,6 @@ export const useCreatePost = () => {
   return {
     loading,
     handleSubmit,
-    error
+    error,
   };
-}; 
+};

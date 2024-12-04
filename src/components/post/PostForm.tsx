@@ -43,4 +43,4 @@ export const PostForm = ({ initialData, onSubmit, loading }: PostFormProps) => {
       </Button>
     </Form>
   );
-}; 
+};

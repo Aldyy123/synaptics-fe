@@ -48,30 +48,19 @@ const PostDetail = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <Card 
-        title={post.title}
-        bordered={false}
-        className="mb-4"
-      >
+      <Card title={post.title} bordered={false} className="mb-4">
         <div className="prose max-w-none">
           <p>{post.body}</p>
           <p className="text-sm text-gray-500">Author ID: {post.user_id}</p>
         </div>
         <div className="mt-4">
-          <Button 
-            type="primary" 
-            danger 
-            onClick={() => toggleDeleteModal(true)}
-          >
+          <Button type="primary" danger onClick={() => toggleDeleteModal(true)}>
             Delete Post
           </Button>
         </div>
       </Card>
 
-      <Button 
-        onClick={handleBackToHome}
-        className="mt-4"
-      >
+      <Button onClick={handleBackToHome} className="mt-4">
         Back to Posts
       </Button>
 

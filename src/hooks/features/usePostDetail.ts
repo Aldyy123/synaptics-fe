@@ -64,4 +64,4 @@ export const usePostDetail = () => {
     handleBackToHome,
     toggleDeleteModal,
   };
-}; 
+};

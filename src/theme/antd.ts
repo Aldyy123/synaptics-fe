@@ -1,5 +1,8 @@
 import { theme as antdTheme, ThemeConfig } from 'antd';
-import { paginationLightThemeConfig, paginationDarkThemeConfig } from './components/pagination';
+import {
+  paginationLightThemeConfig,
+  paginationDarkThemeConfig,
+} from './components/pagination';
 import { cardDarkThemeConfig, cardLightThemeConfig } from './components/card';
 import { buttonDarkTheme, buttonLightTheme } from './components/button';
 
@@ -27,8 +30,8 @@ const baseThemeConfig: ThemeConfig = {
     Checkbox: {
       colorPrimary: '#4a90e2',
     },
-    Button: buttonLightTheme
-  }
+    Button: buttonLightTheme,
+  },
 };
 
 const darkThemeConfig: ThemeConfig = {
@@ -50,7 +53,7 @@ const darkThemeConfig: ThemeConfig = {
     Checkbox: {
       colorPrimary: '#9ecfff',
     },
-    Button: buttonDarkTheme
+    Button: buttonDarkTheme,
   },
   algorithm: [antdTheme.darkAlgorithm],
 };

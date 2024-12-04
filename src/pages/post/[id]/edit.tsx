@@ -4,7 +4,8 @@ import { Post } from '@/types/post';
 import { useRouter } from 'next/navigation';
 
 const EditPost = () => {
-  const { token, data, isLoading, error, isUpdating, handleSubmit } = useEditPost();
+  const { token, data, isLoading, error, isUpdating, handleSubmit } =
+    useEditPost();
   const router = useRouter();
 
   if (!token) {
@@ -57,7 +58,7 @@ const EditPost = () => {
           >
             <Input placeholder="Enter post title" />
           </Form.Item>
-          
+
           <Form.Item
             name="body"
             label="Body"
@@ -70,7 +71,9 @@ const EditPost = () => {
             <Button type="primary" htmlType="submit" loading={isUpdating}>
               Update Post
             </Button>
-            <Button onClick={() => router.push(`/post/${post.id}`)}>Cancel</Button>
+            <Button onClick={() => router.push(`/post/${post.id}`)}>
+              Cancel
+            </Button>
           </div>
         </Form>
       </Card>
