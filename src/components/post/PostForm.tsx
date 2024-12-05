@@ -26,6 +26,7 @@ export const PostForm = ({ initialData, onSubmit, loading }: PostFormProps) => {
       <Form.Item label="Title" required>
         <Input
           value={title}
+          name='title'
           onChange={(e) => setTitle(e.target.value)}
           placeholder="Enter post title"
         />
@@ -34,11 +35,12 @@ export const PostForm = ({ initialData, onSubmit, loading }: PostFormProps) => {
         <Input.TextArea
           value={body}
           onChange={(e) => setBody(e.target.value)}
+          name='body'
           rows={4}
           placeholder="Enter post content"
         />
       </Form.Item>
-      <Button type="primary" htmlType="submit" loading={loading}>
+      <Button type="primary" name='submit' htmlType="submit" loading={loading}>
         {initialData ? 'Update Post' : 'Create Post'}
       </Button>
     </Form>

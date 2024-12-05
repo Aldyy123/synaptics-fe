@@ -47,7 +47,7 @@ export const useHome = () => {
     setCurrentPage(page);
   };
 
-  const filteredPosts = data?.data.filter((post: Post) =>
+  const filteredPosts = data?.data?.filter((post: Post) =>
     post.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
 

@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "title": "Test Post 1",
+      "body": "This is the content of test post 1",
+      "user_id": 123
+    },
+    {
+      "id": 2,
+      "title": "Test Post 2",
+      "body": "This is the content of test post 2",
+      "user_id": 123
+    }
+  ],
+  "meta": {
+    "pagination": {
+      "total": 20,
+      "pages": 2,
+      "page": 1,
+      "limit": 10
+    }
+  }
+} 

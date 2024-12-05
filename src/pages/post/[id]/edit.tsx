@@ -56,7 +56,7 @@ const EditPost = () => {
             label="Title"
             rules={[{ required: true, message: 'Please enter a title' }]}
           >
-            <Input placeholder="Enter post title" />
+            <Input name='title' placeholder="Enter post title" />
           </Form.Item>
 
           <Form.Item
@@ -64,11 +64,11 @@ const EditPost = () => {
             label="Body"
             rules={[{ required: true, message: 'Please enter post content' }]}
           >
-            <Input.TextArea rows={4} placeholder="Enter post content" />
+            <Input.TextArea name='body' rows={4} placeholder="Enter post content" />
           </Form.Item>
 
           <div className="flex gap-2">
-            <Button type="primary" htmlType="submit" loading={isUpdating}>
+            <Button type="primary" name='submit' htmlType="submit" loading={isUpdating}>
               Update Post
             </Button>
             <Button onClick={() => router.push(`/post/${post.id}`)}>
